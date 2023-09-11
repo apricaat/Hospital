@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="8dp"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/patientFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:text="Иванов Иван Иванович" />
+
+        <TextView
+            android:id="@+id/patientDepartment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientFullName"
+            tools:text="Хирургия" />
+
+        <TextView
+            android:id="@+id/patientWard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientDepartment"
+            tools:text="Палата 6" />
+
+        <TextView
+            android:id="@+id/patientBirthdayDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            tools:text="16.12.1995"
+            app:layout_constraintBottom_toBottomOf="@+id/patientFullName"
+            app:layout_constraintStart_toEndOf="@+id/patientFullName"
+            app:layout_constraintTop_toTopOf="@+id/patientFullName" />
+
+        <TextView
+            android:id="@+id/patientDiagnosis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/patientWard"
+            app:layout_constraintTop_toBottomOf="@+id/patientWard"
+            tools:text="Абсцесс" />
+
+        <Button
+            android:id="@+id/btnUpdateDataPatient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientDiagnosis"
+            android:text="Обновить данные пациента"/>
+
+        <Button
+            android:id="@+id/btnDeletePatient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Выписать пациента"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnUpdateDataPatient" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
